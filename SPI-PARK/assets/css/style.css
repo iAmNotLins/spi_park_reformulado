@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Cores para o tema padrão */
+:root {
+    --primary-color: #007bff; 
+    --secondary-color: #6c757d; 
+    --tertiary-color: #fff; 
+    --text-color: #333; 
+    --dark-mode: #000;
+}
+
+/* Cores para o dark mode */
+:root.dark-mode {
+    --primary-color: #61dafb; 
+    --secondary-color: #adb5bd; 
+    --tertiary-color: #20c997; 
+    --text-color: #fff; 
+    --dark-mode: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh; 
+}
+
+/* modo dark mode */
+.container {
+    background: var(--primary-color);
+    transition: background .5s;
+}
+
+.container.active {
+    background: var(--secondary-color);
+}
+
+  .btn {
+    width: 80px;
+    height: 40px;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--dark-mode);
+    
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left .5s;
+    box-shadow: 0 0 0 3px var(--dark-mode);
+}
+
+.btn.active:before {
+    left: 52px;
+}
+
+
+
+
+@media(max-width: 991px){
+    .sidebar{
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
