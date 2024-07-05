@@ -2,19 +2,20 @@
 
 /* Cores para o tema padrão */
 :root {
-    --primary-color: #007bff; 
-    --secondary-color: #6c757d; 
-    --tertiary-color: #fff; 
-    --text-color: #333; 
+    --primary-color: #fcfcfc; 
+    --secondary-color: #626a70; /* cor principal dark-mode */
+    --tertiary-color: #3FA2F6; 
+    --text-color: #0F67B1; 
     --dark-mode: #000;
+    --nav-color: #FAFFAF; 
 }
 
 /* Cores para o dark mode */
 :root.dark-mode {
-    --primary-color: #61dafb; 
-    --secondary-color: #adb5bd; 
+    --primary-color: #31616e; 
+    --secondary-color: #0F67B1; 
     --tertiary-color: #20c997; 
-    --text-color: #fff; 
+    --text-color: #0F67B1; 
     --dark-mode: #000;
 }
 
@@ -22,38 +23,27 @@
     margin: 0;
     padding: 0;
 }
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    width: 100vw;
-    height: 100vh; 
-}
-
-/* modo dark mode */
-.container {
-    background: var(--primary-color);
-    transition: background .5s;
-}
-
 .container.active {
     background: var(--secondary-color);
 }
 
   .btn {
-    width: 80px;
-    height: 40px;
+    width: 60px;
+    height: 20px;
     border-radius: 60px;
     position: relative;
     cursor: pointer;
     box-shadow: 0 0 0 3px var(--dark-mode);
+    margin-top: 10px;
+    
     
 }
 
 .btn:before {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50px;
     top: 50%;
     left: 5px;
@@ -63,7 +53,7 @@ body {
 }
 
 .btn.active:before {
-    left: 52px;
+    left: 42px;
 }
 
 
@@ -74,4 +64,40 @@ body {
         background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(10px);
     }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilização do Navbar */
+.navbar {
+    font-weight: 700; /* Texto em negrito */
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    /* Estilos para os links do navbar */
+    color: #000000; /* Cor dos links */
+}
+
+.navbar-nav .nav-link:hover {
+    /* Estilos para os links do navbar no hover */
+    color: #4485c7; /* Cor dos links no hover */
+}
+
+/* modo dark mode */
+.container {
+    background: var(--primary-color);
+    transition: background .5s;
+   
+}
+
+.sobre h1 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sobre p {
+    text-align: center;
 }

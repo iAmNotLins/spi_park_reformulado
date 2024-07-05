@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Meu Site</title>
 </head>
-<body class="container">
+<body class="container" >
+   <!--Precisa arrumar a classe container para arrumar o dark mode-->
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+    
+     
+    <nav class="navbar navbar-expand-lg   " >
         <div class="container-fluid">
             <!-- Logo-->
-          <a class="navbar-brand fs-4" href="#">Bootstrap navbar</a>
+          <a class="navbar-brand fs-4" href="#">SPI PARK</a>
           <!-- Toggle Btn-->
           <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,36 +30,135 @@
             </div>
             <!-- Sidebar body-->
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li class="nav-item mx-2">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="#about">About</a>
+                  <a class="nav-link" href="#about">Sobre</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#Services">Services</a>
+                    <a class="nav-link" href="#prices">Preços</a>
                   </li>
                   <li class="nav-item mx-2">
-                    <a class="nav-link" href="#Contact">Contact</a>
+                    <a class="nav-link" href="#location">Localização</a>
                   </li>
-                  <li>  <div class="btn"></div> 
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#contact">Contato</a>
+                  </li>
+                  <li class="nav-item mx-2">  <div class="btn"></div> 
                   </li>
               </ul>
+              <!-- Login / Sign up-->
             
             </div>
           </div>
         </div>
       
       </nav>
+  
       
-      
+      <div class="sobre">
+        <h1>ABERTO 24HORAS</h1><br>
+        <p>Prestação de serviços de recepção e orientação as vagas no
+          estacionamento</p>
+        <p>Estacionamento com seguro, o cliente estaciona e leva as chaves</p>
+      </div>
 
-        
+
+      <!--Carrosel de imagens-->
+      <div class="containerr py-5">
+        <div class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel" id="ads">
+          <div class="carousel-indicators">
+            <button class="active" data-bs-target="ads" data-bs-slide-to="0">
+            </button>
+            <button class="" data-bs-target="ads" data-bs-slide-to="1">
+            </button>
+            <button class="" data-bs-target="ads" data-bs-slide-to="2">
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="https://picsum.photos/1280/420?random=1" alt="" class="d-bloc w-100">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="https://picsum.photos/1280/420?random=2" alt="" class="d-bloc w-100">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="https://picsum.photos/1280/420?random=3" alt="" class="d-block w-100">
+            </div>
+          </div>
+          <button class="carousel-control-prev" data-bs-target="#ads" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon">
+            </span>
+          </button>
+          <button class="carousel-control-next" data-bs-target="#ads" data-bs-slide="next">
+            <span class="carousel-control-next-icon">
+            </span>
+          </button>
+        </div>
+      </div>
+
+       <!--Tabela de preços-->
+        <div class="table">
+          <div class="table-responsive">
+          <table class="table  table-striped table-hover table-bordered table-sm align-middle caption-top">
+            <thead class="table-warning">
+              <tr>
+                <th>Avulso</th>
+                <th>Carro pequeno</th>
+                <th>Avulso</th>
+                <th>Carro grande/utilitário</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <td>ATÉ 30 MIN</td>
+                <td>R$ 7,00</td>
+                <td>ATÉ 30 MIN</td>
+                <td>R$10,00</td>
+              </tr>
+              <tr class="table-warning">
+                <td>ATÉ 1 H</td>
+                <td>R$ 12,00</td>
+                <td>ATÉ 1 H</td>
+                <td>R$ 15,00</td>
+              </tr>
+              <tr>
+                <td>ATÉ 2 H</td>
+                <td>R$ 14,00</td>
+                <td>ATÉ 2 H</td>
+                <td>R$ 30,00</td>
+              </tr>
+              <tr class="table-warning">
+                <td>D+ HORAS</td>
+                <td>+ R$ 3,00</td>
+                <td>D+ HORAS</td>
+                <td>+ R$ 5,00</td>
+              </tr>
+              <tr>
+                <td>DIARIA 12 H</td>
+                <td>R$ 18,00</td>
+                <td>DIARIA 12 H</td>
+                <td>R$ 35,00</td>
+              </tr>
+              <tr class="table-warning">
+                <td>PERIODO 24 H</td>
+                <td>R$ 30,00</td>
+                <td>PERIODO 24 H</td>
+                <td>R$ 50,00</td>
+              </tr>
+             
+
+            </tbody>
+            <caption class="text-center table-dark">Tabela de Preços</caption>
+          </table>
+        </div>
+        </div>
     
 
    
-   
+      
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
